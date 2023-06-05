@@ -1,0 +1,148 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  background-color: #F6F1F1;
+}
+
+.stock__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search__box {
+  width: 70%;
+  height: 28px;
+  background-color: #D2E9E9;
+  border: 1px solid #D2E9E9;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.auto__complete {
+  position: relative;
+  text-align: center;
+}
+
+.suggestions {
+  width: calc(70% + 4px);
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  top: 36x;
+  left: 50%;
+  background-color: #d7e7e7;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  transform: translateX(-50%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+li {
+  list-style: none;
+  min-height: 30px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.active {
+  background: lightgray;
+}
+
+.stock__card {
+  min-height: 300px;
+}
+
+.stock__card,
+.stock__chart {
+  border-radius: 8px;
+  color: #253b56;
+  margin: 0 12px;
+  background-color: #AFD3E2;
+}
+
+.stock__chart {
+  box-shadow: 0px 0px 8px #ccc;
+  height: 350px;
+  margin-bottom: 15px;
+}
+
+.stock__card__content {
+  padding: 4px 16px 5px 16px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #ccc;
+}
+
+.stock__card__title {
+  font-size: 20;
+  font-weight: 600;
+  margin: 12px 0px 0px 0px;
+}
+
+.no__data {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.slide__container {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #19A7CE;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #253b56;
+  cursor: pointer;
+}
+
+.week__high__low {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.next__prev__stock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 0 20px;
+}
+
+.next__stock,
+.previous__stock {
+  cursor: pointer;
+}
