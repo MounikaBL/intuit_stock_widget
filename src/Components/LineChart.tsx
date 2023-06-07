@@ -15,7 +15,8 @@ export const LineChart = observer(() => {
     useEffect(() => {
         let company: any = stocksStore.displayedStock;
         let timeSeriesData = processData(stocksStore.timeSeriesData);
-        (Highcharts as any).chart('line_chart', {
+
+        timeSeriesData && (Highcharts as any).chart("line_chart", {
             chart: {
                 borderRadius: 8,
                 height: 350,
